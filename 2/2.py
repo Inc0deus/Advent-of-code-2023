@@ -4,11 +4,11 @@
 """
 """
 
-t=open('i.txt').readlines()
+t=[l.strip() for l in open('i.txt').readlines()]
 
 game = []
 for l in t:
-    l = l.strip().split(":")[1].split(";")
+    l = l.split(":")[1].split(";")
     subsets = []
     for p in l:
         s = {}
@@ -37,11 +37,11 @@ print(f"part I: {result}")
 """
 """
 
-t=open('i.txt').readlines()
+t=[l.strip() for l in open('i.txt').readlines()]
 
 game = []
 for l in t:
-    l = l.strip().split(":")[1].split(";")
+    l = l.split(":")[1].split(";")
     subsets = []
     for p in l:
         s = {}
