@@ -4,11 +4,11 @@
 """
 """
 
-t=open('i.txt').readlines()
+t=[l.strip() for l in open('i.txt').readlines()]
 
 result = 0
 for l in t:
-    l = l.strip().split(': ')[1].split(' | ')
+    l = l.split(': ')[1].split(' | ')
     dic = {int(i):None for i in l[0].split()}
 
     score = 0
@@ -27,11 +27,11 @@ print(f"part I: {result}")
 """
 """
 
-t=open('i.txt').readlines()
+t=[l.strip() for l in open('i.txt').readlines()]
 
 cards = []
 for l in t:
-    l = l.strip().split(': ')[1].split(' | ')
+    l = l.split(': ')[1].split(' | ')
     dic = {int(i):None for i in l[0].split()}
 
     match = 0

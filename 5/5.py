@@ -4,7 +4,7 @@
 """
 """
 
-t=open('i.txt').readlines()
+t=[l.strip() for l in open('i.txt').readlines()]
 
 seeds = [int(s) for s in t[0].split()[1:]]
 
@@ -19,7 +19,7 @@ while i < len(t):
         map[l[0]] = l[1]
         values[l[1]] = []
         i += 1
-        while i < len(t) and t[i][0].isdigit():
+        while i < len(t) and len(t[i]) > 0 and t[i][0].isdigit():
             dest, sour, rang = (int(m) for m in t[i].split())
             values[l[1]].append((dest, sour, rang))
             i += 1
@@ -44,7 +44,7 @@ print(f"part I: {result}")
 """
 """
 
-t=open('i.txt').readlines()
+t=[l.strip() for l in open('i.txt').readlines()]
 seeds = [int(s) for s in t[0].split()[1:]]
 
 # tokenize the file
@@ -54,7 +54,6 @@ source_range = {}   # range of the source
 i = 2
 while i < len(t):
     l = t[i]
-    l = l.strip()
     if l != "":
         l = l.replace(" map:", "").split("-to-")
         map[l[0]] = l[1]
@@ -62,7 +61,7 @@ while i < len(t):
         v = []
         i += 1
         j = 0
-        while i < len(t) and t[i][0].isdigit():
+        while i < len(t) and len(t[i]) > 0 and t[i][0].isdigit():
             dest, sour, rang = (int(m) for m in t[i].split())
             values[l[1]].append((dest, sour, rang))
             v.append((sour,sour+rang-1,j))
