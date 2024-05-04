@@ -4,7 +4,7 @@
 """
 """
 
-t=[l.strip() for l in open('i.txt').readlines()]
+t=[list(l.strip()) for l in open('i.txt').readlines()]
 
 print(f"part I: {0}")
 
@@ -12,7 +12,7 @@ print(f"part I: {0}")
 """
 """
 
-t=[l.strip() for l in open('i.txt').readlines()]
+t=[list(l.strip()) for l in open('i.txt').readlines()]
 
 print(f"part II: {0}")
 
