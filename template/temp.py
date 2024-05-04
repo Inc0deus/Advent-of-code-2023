@@ -4,15 +4,21 @@
 """
 """
 
-t=[list(l.strip()) for l in open('i.txt').readlines()]
+def partI():
+    t=[l.strip() for l in open('i.txt').readlines()]
 
-print(f"part I: {0}")
+    return 0
+
+print(f"part I: {partI()}")
 
 # ================ part II ================
 """
 """
 
-t=[list(l.strip()) for l in open('i.txt').readlines()]
+def partII():
+    t=[l.strip() for l in open('i.txt').readlines()]
 
-print(f"part II: {0}")
+    return 0
+
+print(f"part II: {partII()}")
 
